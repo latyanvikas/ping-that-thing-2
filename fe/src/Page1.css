@@ -1,16 +1,18 @@
 body {
   font-family: Arial, sans-serif;
+  font-size: 40px;
   margin: 0;
   padding: 0;
-  background-color: white;
+  background-color: grey;
   color: #333;
 }
 
 .dashboard-header {
   text-align: center;
-  padding: 20px;
+  padding: 80px;
   background-color: green;
   color: white;
+  border: #000 solid 5px;
 }
 
 .dashboard-container {
@@ -64,4 +66,36 @@ body {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  grid-template-rows: repeat(2, 1fr);   /* Two rows */
+  gap: 5px; /* Reduce spacing between grid items */
+  height: 85vh; /* Make the grid occupy the full viewport height */
+}
+
+.grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-button {
+  width: 97%; /* Slightly smaller to fit within reduced spacing */
+  height: 97%; /* Slightly smaller to fit within reduced spacing */
+  font-size: 4rem; /* Larger font size for more emphasis */
+  font-family: 'Pacifico'; /* Fun and playful font */
+  border: 3px solid #000; /* Add a black border around the buttons */
+  border-radius: 10px; /* Rounded corners */
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.grid-button:hover {
+  background-color: darkgreen;
+  transform: scale(1.01); /* Slight zoom effect on hover */
 }
